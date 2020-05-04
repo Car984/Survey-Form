@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Survey Form</title>
+	<style>
+		
+		body {
+			background-image: url(https://www.guideposts.org/sites/guideposts.org/files/styles/bynder_webimage/public/story/peoplehelpingpeople_marquee.jpg);
+			background-size: 215%;
+			background-repeat: no-repeat;
+			color: white;
+			text-shadow: black;
+			font-family: Verdana, Geneva, Tahoma, sans-serif;
+			kerning: 2pt;}
+	
+		input {
+			margin-top: 5px;}
+
+		li {
+			text-align: left;
+			font-size: 12pt;}
+
+		#title {
+			font-size: 40pt;
+			color: magenta;
+			font-weight: 12pt;
+			text-align: center;}
+
+		#description {
+			color: magenta;
+			font-weight: 6pt;
+			text-align: center;}
+
+		#survey-form {
+			background-color: rgba(0, 0, 255, 0.75);
+			box-shadow: 5px 5px 5px rgba(2, 2, 2, 0.5);
+			color: white;
+			margin: auto;
+      		padding: 2%;
+			width: 55%;
+			height: auto;
+			border-radius: 10px;
+			text-align: center;}
+
+		#name {
+			text-align: left;}
+
+		#name-label {
+			max-width: 100%;
+			min-width: 2%;
+			margin-left: auto;}
+
+		#email {
+			text-align: left;}
+
+		#email-label {
+			max-width: 100%;
+			min-width: 2%;
+			margin-left: auto;}
+
+		#number {
+			text-align: left;}
+
+		#number-label {
+			margin-left: auto;
+			min-width: 2%;
+			max-width: 50%;}
+
+		.flex-container {
+            display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			row-gap: 5px;}
+		
+		#dropdown {}
+		
+		#dropdown-list {
+			max-width: 75%;
+			min-width: auto;
+			margin-top: 10px;
+			font-size: 10pt;}
+
+		#text-input {}
+
+		.comments {
+			min-width: 90%;
+			min-height: 50%;
+			margin-top: 2%;}
+
+		.radio {
+			margin-top: 2%;
+		}
+		
+		#ck-list {}
+
+		.ck-list {
+			column-count: 2;
+			column-gap: 2px;
+			margin-top: 2%;}
+		
+		#submit {
+			min-width: 20%;
+			max-width: 30%;
+			color: blue;
+			font-size: 12pt;}
+		
+		#submit:hover {
+			background-color: violet;}
+
+
+	</style>
+</head>
+	
+	<h1 id="title">Survey Form</h1>
+
+	<p id="description">Thank you for filling out the following survey <br>to help us improve our site.</p>
+
+	<body>
+		
+		<form id="survey-form" action="#">
+
+		<fieldset>
+			<div class="flex-container">
+				<div id="name">
+					<label for="name-label">Name
+					<div>
+						<input type="text" id="name-label" placeholder="First and Last" required></input>
+					</div>
+					</label>
+				</div>
+				<div id="email">
+					<label for="email-label">Email
+					<div>
+						<input type="email" id="email-label" placeholder="Email Address" pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*" required>
+					</div>
+					</label>
+				</div>
+				<div id="number">
+					<label for="number-label">Phone #
+					<div>
+						<input type="tel" id="number-label" placeholder="Phone Number" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+						<small > Format: 443-754-2354</small>
+					</div>
+					</label>
+				</div>
+				
+			</div>
+
+		</fieldset>
+			<ol>
+				<div id="dropdown">
+				<li>
+					<label for="dropdown-list">What was your level of ease navigating the site?	
+					<select id="dropdown-list">
+						<option value="0">Select from the options below.</option>
+						<option value="1">I found the site easy to naigate.</option>
+						<option value="2">I found the site to be somewhat easy to navigate.</option>
+						<option value="3">I found the site to be somewhat difficult to navigate.</option>
+						<option value="4">I found the site difficult to navigate.</option>
+						<option value="5">I couldn't find my ass with both hands.</option>
+					</select>
+					</label>
+				</li>
+				</div>
+		
+				<div>
+					<p>
+					<li>What is the most important feature to you about a website?</b>
+					<br>
+					<label for="easy-nav">	
+						<input id="easy-nav" type="radio" name="favs" value="easy-nav" class="radio">Easy to Navigate</label>
+						<br>
+					<label for="pics">
+						<input id="pics" type="radio" name="favs" value="pics">Lots of Images</label>
+						<br>
+					<label for="organized">
+						<input id="organized" type="radio" name="favs" value="organized">Well Organized</label>
+					</li></p>
+				</div>
+				<div id="ck-list">
+					<p>
+					<li>Choose ALL options that you feel were executed well durring your experience.
+					<div class="ck-list">
+					<label for="color">
+						<input id="color" type="checkbox" name="options" value="color">Color Usage</label>
+					<br>
+					<label for="nav">
+						<input id="nav" type="checkbox" name="options" value="nav">Easy to Navigate</label>
+					<br>
+					<label for="time">
+						<input id="time" type="checkbox" name="options" value="time">Page Load Times</label>
+					<br>
+					<label for="organized">
+						<input id="organized" type="checkbox" name="options" value="organized">Well Organized</label>
+					</div>
+					</li>
+					</p>
+				</div>
+
+				<div id="ck-list">
+					<p>
+					<li>Choose ALL options that best describe what <br>you use the Internet for?
+					<div class="ck-list">
+					<label for="shopping">
+						<input id="shopping" type="checkbox" name="web-use" value="shopping">Shopping</label>
+					<br>
+					<label for="banking">
+						<input id="banking" type="checkbox" name="web-use" value="banking">Business</label>
+					<br>
+					<label for="emails">
+						<input id="emails" type="checkbox" name="web-use" value="emails">Emails</label>
+					<br>
+					<label for="learning">
+						<input id="learning" type="checkbox" name="web-use" value="learning">Learning</label>
+					<br>
+					<label for="pay-bills">
+							<input id="pay-bills" type="checkbox" name="web-use" value="pay-bills">Paying Bills</label>
+					<br>
+					<label for="news">
+						<input id="news" type="checkbox" name="web-use" value="news">News Updates</label>
+						</div>
+					</li>
+					</p>
+				</div>
+			
+				<div>
+				<p>
+				<li>
+				<label for="comments">Please include additional comments in the <br>space below.
+					<br>
+					<textarea id="comments" type="textarea" name="text-input" placeholder="Add comments here." class="comments"></textarea>
+				</label>
+				</li>
+				</p>
+				</div>
+			</ol>
+
+			<div for="sbumit">
+			<button id="submit" type="submit">Submit</button>
+			</div>
+		
+
+		</form>
+
+	</body>
+
+</html>
